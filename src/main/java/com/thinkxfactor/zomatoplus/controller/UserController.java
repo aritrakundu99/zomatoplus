@@ -48,7 +48,11 @@ public class UserController {
 		System.out.println(user.toString());
 		return user;
 	}
+	@PostMapping("/login")
+	public User userLogin(@RequestBody  User user) {
+		System.out.println(user.toString());
+		return user;
+	}
 
-	
 
 }
