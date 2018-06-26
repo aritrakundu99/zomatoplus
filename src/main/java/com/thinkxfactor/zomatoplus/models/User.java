@@ -61,7 +61,7 @@ public String getPincode() {
 public void setPincode(String pincode) {
 	this.pincode = pincode;
 }
-	@Column(name="name")
+	@Column(name="name",unique=true)
 	private String name;
     @Column(name="type")
     private String type;
