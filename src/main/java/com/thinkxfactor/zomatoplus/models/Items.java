@@ -1,40 +1,59 @@
 package com.thinkxfactor.zomatoplus.models;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="items_table")
 public class Items {
-	private String id;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	private String starter;
-	private String m_course;
-	private String dessert;
-	public Items(String l,String a,String b,String c)
-	{   this.id=l;
-		this.starter=a;
-		this.m_course=b;
-		this.dessert=c;
-	}
-	public String getStarter() {
-		return starter;
-	}
-	public void setStarter(String starter) {
-		this.starter = starter;
-	}
-	public String getM_course() {
-		return m_course;
-	}
-	public void setM_course(String m_course) {
-		this.m_course = m_course;
-	}
-	public String getDessert() {
-		return dessert;
-	}
-	public void setDessert(String dessert) {
-		this.dessert = dessert;
-	}
+	 @Id
+	    @GeneratedValue
+	    @Column(name="Item_id")
+		private Long id;
+	 @Column(name="restaurant_id")
+		private Long restaurant_id;
+		@Column(name="name")
+		private String name;
+		@Column(name="price")
+		private Double price;
+		@Column(name="description")
+		private String description;
+		Items(){}
+		public Long getId() {
+			return id;
+		}
+		public void setId(Long id) {
+			this.id = id;
+		}
+		public Long getRestaurant_id() {
+			return restaurant_id;
+		}
+		public void setRestaurant_id(Long restaurant_id) {
+			this.restaurant_id = restaurant_id;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public Double getPrice() {
+			return price;
+		}
+		public void setPrice(Double price) {
+			this.price = price;
+		}
+		public String getDescription() {
+			return description;
+		}
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		
+		
+	 
 	
 
 }
