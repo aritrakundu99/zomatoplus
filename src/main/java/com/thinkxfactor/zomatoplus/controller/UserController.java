@@ -37,4 +37,12 @@ public List<User> getAll()
 	List<User> listofusers=userRepository.findAll();
 	return listofusers;
 }
+@PostMapping("/login")
+public User getlogin(@RequestBody User usr)
+
+{ String name=usr.getName();
+String password=usr.getPassword();
+	User us=userRepository.findByNameAndPassword(name, password);
+	return us;
+}
 }
