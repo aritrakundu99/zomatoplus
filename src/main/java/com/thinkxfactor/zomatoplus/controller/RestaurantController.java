@@ -20,6 +20,7 @@ import com.thinkxfactor.zomatoplus.models.Restaurant;
 public class RestaurantController {
 	@Autowired
 	private RestaurantRepository RestaurantRepository;
+	@Autowired
 	private ItemsRepository ItemsRepository;
 
 	@PostMapping("/add")
